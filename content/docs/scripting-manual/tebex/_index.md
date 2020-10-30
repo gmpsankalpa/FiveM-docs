@@ -3,47 +3,69 @@ title: Monetizing your server
 weight: 461
 ---
 
-By using our official server monetization partner Tebex, server owners are able to monetize their content and communities. They are our *exclusive* provider for server monetization with a competitive commission rate (15%) matching modern commerce services. Tebex offers a wide range of payment methods supporting the most popular Cfx.re server regions and more! With their intuitive dashboard you can launch your own web store within minutes.
+Monetize your in-game content, sell resources and support FiveM through our official server monetization partner, Tebex. With Tebex you can set up your own unique and secure webstore within minutes. They are our _exclusive_ provider for server monetization.
 
 Getting started
 ---------------
 
-In order to use Tebex, you must set up an account on their [website](https://server.tebex.io/register) and go through the steps as outlined on their registration flow.
+### 1. Register an account
 
-### Connecting server to Tebex
+In order to use Tebex, you must set up an account on [their website][tebex].
 
-Using sv_tebexSecret etc.
+### 2. Set up your first store
 
-### Creating your first package
+Create your first webstore after registering.
 
-Example tutorial of creating a package that triggers a simple command
+- Select FiveM as your game server and confirm.
+- Name your webstore and select a currency.
+- Accept the terms and rules.
+
+### 3. Configure Tebex on your server
+
+To activate Tebex on your server, you must add your Tebex key to your `server.cfg`.
+
+- After completing the previous step, you will see a few options to link your store with.
+- Select `Game Server` and continue.
+- Copy and add the presented `sv_tebexSecret` to your `server.cfg`.
+- When you restart your server, you should see the `Authenticated with Tebex: <your store>` message in your server console.
+
+### 4. Create content!
+
+Now your store is linked and running, it's your turn to create something great. Start [adding packages][tebex-docs-packages] to your store, [reward your players][commands] in-game and be creative.
 
 
-Command Variables
----------
-There are variables available for use when triggering a command upon purchase of a package. For more information, see [here](https://docs.tebex.io/store/command-management/an-introduction-to-commands#variables-to-customise-your-commands)
+Profit and "ToS" Compliance
+---------------------------
 
-| Variable    | Description |
-| ----------- | ----------- |
-| `{sid}`      | Net ID of an online player |
-| `{hexid}`   | Returns Steam identifier of player |
+Using Tebex counts as "built-in commerce functionality" as described in the FiveM Platform Service Agreement, commonly known in our community as the [Terms of Service][terms]. So yes, **profit is allowed**.
 
+> Despite being our monetization partner, we might instill additional terms to disallow selling of Rockstar game content (built-in DLC vehicles, etc.) and mandate tracking of earned vs. purchased virtual currency in order to prevent purchased virtual currency from being used to violate any party's copyright, including Rockstar's.
 
-Advanced Features
-----------------
-
-Documentation of commerce natives to create more elaborate systems (e.g. associating an in-game item with a store SKU)
-
-Profit and “ToS” Compliance
+Frequently Asked Questions
 --------------------------
-Using their platform will count as 'built-in commerce functionality' as described in the FiveM Platform Service Agreement, commonly known in our community as the [Terms of Service](https://fivem.net/terms) 72. So yes, __'profit' is allowed__. We know that many of you have been waiting a long time for a 'legal' and, most importantly, safe way to monetize aspects of your server(s) and we have been listening.
 
-### Limitations
-However, we might instill additional terms to disallow purchasing of Rockstar game content (built-in DLC vehicles, etc.) and mandate tracking of earned vs. purchased virtual currency in order to prevent purchased virtual currency from being used to violate any party’s copyright, including Rockstar’s.
+### Is it allowed to sell resources?
+Yes! With Tebex you are allowed to sell resources, as long as they abide by the FiveM [Terms of Service][terms]. Violation or malicious intent will result in blacklisting of the resource.
 
+### What authentication methods can be used?
+Purchases must be done using a [FiveM account][forums].
 
 Support
 -------
 
-- Forums
-- [Tebex Documentation](https://docs.tebex.io/store/)
+- [Forums][forums]
+- [Tebex Documentation][tebex-docs]
+
+What's next?
+------------
+
+- [Create an in-game callback after a purchase][commands]
+- [Check for previously bought player purchases][functions]
+
+[forums]: https://forum.cfx.re/
+[tebex]: https://www.tebex.io/fivem
+[tebex-docs]: https://docs.tebex.io/store/
+[tebex-docs-packages]: https://docs.tebex.io/store/key-features/how-to-create-packages
+[commands]: ./commands
+[functions]: ./functions
+[terms]: https://fivem.net/terms
